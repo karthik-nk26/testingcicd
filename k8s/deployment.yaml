@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cicd-app
+  name: testingcicd
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cicd-app
+      app: testingcicd
   template:
     metadata:
       labels:
-        app: cicd-app
+        app: testingcicd
     spec:
       containers:
-      - name: cicd-app
+      - name: testingcicd
         image: karthiknk826/testingcicd:v1
         imagePullPolicy: Always
         ports:
